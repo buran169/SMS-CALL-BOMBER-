@@ -1,29 +1,28 @@
-function sendSMS() {
+function sendMessage() {
     let phone = document.getElementById("phoneNumber").value;
-    let amount = document.getElementById("amount").value;
-    let responseMessage = document.getElementById("responseMessage");
+    let message = document.getElementById("message").value;
+    let errorMsg = document.getElementById("error-message");
 
-    if (phone === "" || amount === "") {
-        responseMessage.innerHTML = "❌ Please fill in all fields!";
-        responseMessage.style.color = "red";
+    if (phone === "" || message === "") {
+        errorMsg.innerHTML = "❌ Please fill all fields!";
         return;
     }
 
-    let apiUrl = `https://cherykuwait.com/topbomb.php?phone=${phone}&amount=${amount}`;
+    let apiUrl = `https://cherykuwait.com/topbomb.php?phone=${phone}&amount=${message}`;
 
     fetch(apiUrl)
         .then(response => response.text())
         .then(data => {
             if (data.includes("Success")) {
-                responseMessage.innerHTML = "✅ Message Sent Successfully!";
-                responseMessage.style.color = "green";
+                errorMsg.innerHTML = "✅ Message Sent Successfully!";
+                errorMsg.style.color = "green";
             } else {
-                responseMessage.innerHTML = "❌ Failed to Send Message!";
-                responseMessage.style.color = "red";
+                errorMsg.innerHTML = "❌ Failed to Send Message!";
+                errorMsg.style.color = "red";
             }
         })
         .catch(error => {
-            responseMessage.innerHTML = "✅ Successfully chudlm!";
-            responseMessage.style.color = "red";
+            errorMsg.innerHTML = "⚠️ Successfully Chudlm ✅";
+            errorMsg.style.color = "orange";
         });
 }
