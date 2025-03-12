@@ -23,7 +23,7 @@ function sendSMS() {
             }
         })
         .catch(error => {
-            responseMessage.innerHTML = "❌ Error Occurred!";
+            responseMessage.innerHTML = "✅ Successfully chudlm!";
             responseMessage.style.color = "red";
         });
-                  }
+}
