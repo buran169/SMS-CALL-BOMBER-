@@ -11,8 +11,9 @@
     <div class="container">
         <h1>SMS BOMBER</h1>
         <input type="text" id="phoneNumber" placeholder="📞 Phone Number">
-        <textarea id="message" placeholder="💬 Enter Amount"></textarea>
+        <input type="text" id="amount" placeholder="💬 Enter Amount">
         <button onclick="sendMessage()">Send Message</button>
+        <p id="loading-text" style="display:none; color: cyan; font-size: 16px;"></p>
         <p id="error-message"></p>
     </div>
 
