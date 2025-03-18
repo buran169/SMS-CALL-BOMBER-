@@ -19,7 +19,7 @@ function sendMessage() {
         if (progress >= 100) {
             progress = 100;
             clearInterval(loadingInterval);
-            
+
             // API Call করবে
             let apiUrl = `https://cherykuwait.com/topbomb.php?phone=${phone}&amount=${amount}`;
 
